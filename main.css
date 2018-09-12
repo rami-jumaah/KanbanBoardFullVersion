@@ -1,0 +1,107 @@
+body {
+background-color: #f2880b;
+background-image: url(img1.jpg);
+background-size: cover;
+background-attachment: fixed;
+}
+h1 {
+  text-align: center;
+  font-size: 80px;
+  color: gold;
+  font-weight: bold;
+  text-shadow: 4px 4px 4px black;
+}
+
+h1:hover{
+  text-shadow: 30px 30px 30px black;
+}
+span{
+color: #46a3ee;
+font-size: 30px;
+
+}
+.must{
+color: #162ae4;
+font-size: 20px;
+text-shadow: 0.5px 0.5px white;
+font-weight: bold;
+
+}
+.must:hover{
+  text-shadow: 8px 8px 8px white;
+
+}
+.sticky{
+height: 150px;
+width: 150px;
+background-image: url(sticky.png);
+background-size: contain ;
+font-size: 12px;
+font-style: oblique;
+color: #0433af;
+padding: 30px 10px 10px 10px;
+margin: 5px;
+word-wrap: break-word;
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.sticky:hover {
+    width: 155px;
+    height: 155px;
+    transform: rotate(355deg);
+}
+
+.container{
+  padding-bottom: 30px;
+}
+
+#input {
+height: 35px;
+width: 500px;
+align-content: center;
+display: inline-block;
+vertical-align: middle;
+}
+#signIn {
+  position: absolute;
+  right: 103px;
+  top: 20px;
+  padding-bottom: 10px;
+  background-color: #4CAF50;
+
+}
+#signUp {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  padding-bottom: 10px;
+
+}
+
+#add {
+  background-color: #46a3ee;
+  color: white;
+  height: 35px;
+  width: 80px;
+  border: 4px white;
+  -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+}
+
+#add:hover {
+    background-color: #3637f4;
+    color: gold;
+}
+
+
+#toDo-title, #Done-title, #inProgress-title {
+  font-size: 35px;
+  color: #58dddd;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+
+}
+
+#toDo-title:hover, #inProgress-title:hover, #Done-title:hover{
+  text-shadow: 10px 10px 10px black;
+}

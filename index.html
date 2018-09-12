@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>KanBan Board</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+<div class="sign-up container">
+
+  <a href="#" class="signin" data-toggle="modal" data-target="#signin"><button id="signIn" class="btn btn-primary">Sign in</button></a>
+
+  <a href="#" class="signup" data-toggle="modal" data-target="#signup"><button id="signUp" class="btn btn-primary">Sign up</button></a>
+
+</div>
+<div>
+  <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Sign in</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="emailAddress">Email address</label>
+              <input type="email" class="form-control input-lg" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control input-lg" placeholder="Password" required>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="forget"> Keep me logged in
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="confirm-btn" value="Sign in">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end:modal-signin -->
+
+  <!-- modal -->
+
+  <script>
+      $('.modal').on('shown.bs.modal', function() {
+          var curModal = this;
+          $('.modal').each(function() {
+              if (this != curModal) {
+                  $(this).modal('hide');
+              }
+          });
+      });
+  </script>
+
+</div>
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sign up</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" action="form.php" method="post">
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input-lg" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input-lg" placeholder="Confirm Password">
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="agree"> Agree to our <a href="#">terms of use</a> and <a href="#">privacy policy</a>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" class="confirm-btn" value="Sign up">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end:modal-signup -->
+
+
+<!-- modal -->
+
+<script>
+    $('.modal').on('shown.bs.modal', function() {
+        var curModal = this;
+        $('.modal').each(function() {
+            if (this != curModal) {
+                $(this).modal('hide');
+            }
+        });
+    });
+</script>
+
+<div class='container text-center'>
+  <h1 id="title">KanBan Board</h1>
+</div>
+<div class="container text-center">
+
+  <input type="text" placeholder=" What are you going to do ??" id='input' required/>
+  <button id="add" class="btn btn-primary">Add</button>
+
+  <P class="must"></P>
+</div>
+<div class="row text-center">
+
+  <div class="col-md-4">
+    <h2 id="toDo-title"><span class="glyphicon glyphicon-th-list" aria-label="Left Align"></span>  TO DO </h2>
+    <div class="todo"> </div>
+  </div>
+
+  <div class="col-md-4">
+    <h2 id="inProgress-title"><span class="glyphicon glyphicon-pencil" aria-label="center Align"></span>  In Progress...  </h2>
+    <div class="inprogress"> </div>
+
+  </div>
+
+  <div class="col-md-4">
+    <h2 id="Done-title"> <span class="glyphicon glyphicon-ok" aria-label="center Align"></span>  DONE !!</h2>
+    <div class="done"> </div>
+
+  </div>
+</div>
+
+<script src="bootstrap.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="bootstrap.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
