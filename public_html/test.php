@@ -8,4 +8,8 @@
 
 require_once("../resources/config.php");
 
+echo "Library path: ";
 echo LIBRARY_PATH;
+
+echo "<br>Document root: ";
+echo $_SERVER["DOCUMENT_ROOT"];
