@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c739b7f5-cfe9-439c-9eed-7439860041f2" name="Default Changelist" comment="" />
+    <list default="true" id="c739b7f5-cfe9-439c-9eed-7439860041f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,37 +73,57 @@
       <usages-collector id="statistics.php.rename.constructor" />
       <usages-collector id="statistics.php.new.class" />
     </session>
+    <session id="-463249468">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="js" value="1" />
+          <entry key="php" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PHP" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.php.rename.constructor" />
+      <usages-collector id="statistics.php.composer.actions" />
+      <usages-collector id="statistics.php.new.test" />
+      <usages-collector id="statistics.php.composer.command.options" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class" />
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/app.js">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/jquery/index.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/form.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="632">
+              <caret line="4785" column="33" selection-start-line="4785" selection-start-column="33" selection-end-line="4785" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -109,28 +132,25 @@
         <entry file="file://$PROJECT_DIR$/public_html/test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-              </folding>
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/jquery/index.d.ts">
+        <entry file="file://$PROJECT_DIR$/public_html/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80920">
-              <caret line="4785" column="33" selection-start-line="4785" selection-start-column="33" selection-end-line="4785" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="527">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -142,6 +162,9 @@
       <find>glyph</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -149,8 +172,8 @@
         <option value="$PROJECT_DIR$/public_html/test.php" />
         <option value="$PROJECT_DIR$/resources/library/bootstrap/bootstrap.css" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
-        <option value="$PROJECT_DIR$/public_html/js/app.js" />
         <option value="$PROJECT_DIR$/public_html/index.html" />
+        <option value="$PROJECT_DIR$/public_html/js/app.js" />
       </list>
     </option>
   </component>
@@ -196,7 +219,7 @@
     </entry>
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -204,29 +227,18 @@
         <subPane>
           <expand>
             <path>
-              <item name="ExampleProjectStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExampleProjectStructure" type="462c0819:PsiDirectoryNode" />
+              <item name="KanbanBoardFullVersion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KanbanBoardFullVersion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExampleProjectStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExampleProjectStructure" type="462c0819:PsiDirectoryNode" />
+              <item name="KanbanBoardFullVersion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KanbanBoardFullVersion" type="462c0819:PsiDirectoryNode" />
               <item name="public_html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ExampleProjectStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExampleProjectStructure" type="462c0819:PsiDirectoryNode" />
+              <item name="KanbanBoardFullVersion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KanbanBoardFullVersion" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExampleProjectStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExampleProjectStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ExampleProjectStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ExampleProjectStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,13 +248,13 @@
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="ExampleProjectStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="KanbanBoardFullVersion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="ExampleProjectStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="KanbanBoardFullVersion" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="public_html" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -254,7 +266,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/library/jquery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -327,17 +339,17 @@
       <workItem from="1537467169066" duration="2251000" />
       <workItem from="1537610015926" duration="333000" />
       <workItem from="1537942902217" duration="229000" />
+      <workItem from="1537943950023" duration="1295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10773000" />
+    <option name="totallyTimeSpent" value="12068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1294" height="694" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16450568" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16693678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -351,9 +363,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32976827" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32976827" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,93 +381,41 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public_html/congig.php" />
     <entry file="file://$PROJECT_DIR$/public_html/KanBanBoard.iml" />
-    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.min.css" />
+    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.js" />
+    <entry file="file://$PROJECT_DIR$/resources/library/jquery/jquery-3.1.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.min.js" />
+    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap-4.1.3-dist/js/bootstrap.js" />
+    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap-4.1.3-dist/js/bootstrap.js.map" />
+    <entry file="file://$PROJECT_DIR$/public_html/form.php" />
+    <entry file="file://$PROJECT_DIR$/resources/config.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/css/main.css" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/jquery/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23763" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="245" column="20" lean-forward="true" selection-start-line="245" selection-start-column="20" selection-end-line="245" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26571" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/library/jquery/jquery-3.1.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3773" selection-start-line="6" selection-start-column="3773" selection-end-line="6" selection-end-column="3773" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap-4.1.3-dist/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10574">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/library/bootstrap/bootstrap-4.1.3-dist/js/bootstrap.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/form.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="632">
+          <caret line="4785" column="33" selection-start-line="4785" selection-start-column="33" selection-end-line="4785" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/jquery/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4785" column="33" selection-start-line="4785" selection-start-column="33" selection-end-line="4785" selection-end-column="33" />
+        <state relative-caret-position="527">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2000">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="109">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
         </state>
       </provider>
     </entry>
