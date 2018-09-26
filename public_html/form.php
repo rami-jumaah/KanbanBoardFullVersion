@@ -1,8 +1,8 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: rami
- * Date: 12.09.18
- * Time: 10:29 AM
- */
 
+    $email = $_POST["emailAddress"];
+    $password = $_POST["password"];
+    $signInSubmit = $_POST["signInSubmit"];
+
+
+    echo "Your email is $email and password is $password ";
