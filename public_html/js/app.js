@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    $("#add").click(function() {
+$(function() {
+    $("#add").on( "click" , function() {
         var a = $('#input').val();
         if (a === "") {
-            $('.must').text("** Don't be Lazy .. Write and do something.!! **")
+            $('.must').text("** Don't be Lazy .. Write and do something.!! **");
             return false;
 
         } else {
@@ -28,8 +28,8 @@ $(".inprogress").on("click", ".sticky", function() {
 $(".done").on("click", ".sticky", function() {
     $(this).fadeOut(1000)
 });
-$("#input").keyup(function(event){
-    if(event.keyCode == 13){
-        $("#add").click();
+$("#input").on("keyup" , function(event){
+    if(event.keyCode === 13){
+        $("#add").trigger("click");
     }
 });

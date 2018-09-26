@@ -1,6 +1,6 @@
 body {
     background-color: #f2880b;
-    background-image: url(img1.jpg);
+    background-image: url(../img/img1.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -34,7 +34,7 @@ span{
 .sticky{
     height: 150px;
     width: 150px;
-    background-image: url(sticky.png);
+    background-image: url(../img/sticky.png);
     background-size: contain ;
     font-size: 12px;
     font-style: oblique;
@@ -62,7 +62,7 @@ span{
     display: inline-block;
     vertical-align: middle;
 }
-#signIn {
+#btnsignIn {
     position: absolute;
     right: 103px;
     top: 20px;
@@ -70,7 +70,7 @@ span{
     background-color: #4CAF50;
 
 }
-#signUp {
+#btnsignUp {
     position: absolute;
     right: 30px;
     top: 20px;
