@@ -9,9 +9,9 @@
 $config = array(
     "db" => array(
         "db1" => array(
-            "dbname" => "",
-            "dbuser" => "user",
-            "dbpwd" => "password",
+            "dbname" => "kanbanboard",
+            "dbuser" => "kanbandb",
+            "dbpwd" => "kanban",
             "host" => "localhost"
         )
     ),
