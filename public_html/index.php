@@ -18,6 +18,50 @@
     <a href="#" class="signup" data-toggle="modal" data-target="#signup"><button id="btnsignUp" class="btn btn-primary">Sign up</button></a>
 </div>
 
+<?php
+
+
+// define variables and set to empty values
+$email = $password = $repeatPassword = "";
+$emailError = $passwordError = $repeatPasswordError = $passwordMatch = "";
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty($_POST["email"])) {
+        $emailError = "Email is required";
+    } else {
+        $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
+    }
+
+    if (empty($_POST["password"])) {
+        $passwordError = "Password is required";
+    } else {
+        $password = test_input($_POST["password"]);
+    }
+
+    if (empty($_POST["repeatPassword"])) {
+        $passwordError = "Password is required";
+    } else if ($_POST("repeatPassword") !== $_POST["password"]){
+        $passwordMatch = "Password doesn't match";
+    }
+    else {
+        $password = test_input($_POST["password"]);
+    }
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+?>
 <div>
     <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
         <div class="modal-dialog modal-sm">
@@ -27,7 +71,8 @@
                     <h4 class="modal-title">Sign in</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="form.php" method="post" role="form">
+
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" role="form">
                         <div class="form-group">
                             <label for="email">Email address</label>
                             <input id="email" type="email" name="email" class="form-control input-lg" placeholder="Enter email" required>
@@ -45,6 +90,7 @@
                             <input type="submit" class="confirm-btn" value="Sign in">
                         </div>
                     </form>
+
                 </div>
 
             </div>
@@ -63,7 +109,8 @@
                 <h4 class="modal-title">Sign up</h4>
             </div>
             <div class="modal-body">
-                <form action="form.php" method="post" role="form">
+
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" role="form">
                     <div class="form-group">
                         <input type="email" name="email"  class="form-control input-lg" placeholder="Enter email" required>
                     </div>
@@ -82,6 +129,7 @@
                         <input type="submit" class="confirm-btn" value="Sign up">
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -120,6 +168,9 @@
 
     </div>
 </div>
+<?php
+    echo "Hello $email your password is $password";
+?>
 
 <script src="../resources/library/jquery/jquery-3.1.1.min.js"></script>
 <script src="../resources/library/bootstrap/bootstrap.js"></script>
