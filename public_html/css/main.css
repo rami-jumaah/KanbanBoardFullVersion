@@ -15,11 +15,16 @@ h1 {
 h1:hover{
     text-shadow: 30px 30px 30px black;
 }
-span{
+span {
     color: #46a3ee;
     font-size: 30px;
 
 }
+
+.error {
+    color: #FF0000;
+}
+
 .must{
     color: #162ae4;
     font-size: 20px;
