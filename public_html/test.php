@@ -21,6 +21,15 @@ print_r($config['db']['db1']);
 echo "<br>Test connection:";
 $db = new DBsource();
 
-echo $db->connect();
+//echo $db->connect();
 echo "<br>hi: ";
 print_r($db->get_dbs());
+
+echo "<br>Queryresult:";
+$query = "select * from t_buckets";
+$result = $db->dbQuery($query);
+if($result->num_rows > 0) {
+    while($row=$result->fetch_assoc()) {
+        echo "Bucket name: ".$row['t_buckets_name']."<br>";
+    }
+}
