@@ -1,11 +1,17 @@
+<?php
+    require_once ('../src/config.php');
+    require_once ('../src/DBsource.php');
+    $DBsource = new DBsource($config);
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>KanBan Board</title>
-    <link rel="stylesheet" href="../resources/library/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../resources/library/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -20,45 +26,53 @@
 
 <?php
 
+class Register {
+    public $email;
+    public $password;
+    public $repeatPassword;
 
-// define variables and set to empty values
-$email = $password = $repeatPassword = "";
-$emailError = $passwordError = $repeatPasswordError = $passwordMatch = "";
+    public function __construct($email, $password, $repeatPassword)
+    {
+        $this->email = $email;
+        $this->password = $password;
+        $this->repeatPassword = $repeatPassword;
 
+    }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    public function validate ()
+    {
 
-    if (empty($_POST["email"])) {
-        $emailError = "Email is required";
-    } else {
-        $email = test_input($_POST["email"]);
-        // check if e-mail address is well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
+        $this->email = filter_var($this->email, FILTER_VALIDATE_EMAIL);
+
+        if (empty($this->email)) {
+            return false;
         }
-    }
 
-    if (empty($_POST["password"])) {
-        $passwordError = "Password is required";
-    } else {
-        $password = test_input($_POST["password"]);
-    }
+        if (empty($this->password) && $this->password !== $this->repeatPassword) {
+            return false;
+        }
 
-    if (empty($_POST["repeatPassword"])) {
-        $passwordError = "Password is required";
-    } else if ($_POST("repeatPassword") !== $_POST["password"]){
-        $passwordMatch = "Password doesn't match";
-    }
-    else {
-        $password = test_input($_POST["password"]);
+        $this->password = hash('sha512', $this->password);
+        return true;
     }
 }
 
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $register = new Register($_POST['email'], $_POST['password'], $_POST['repeatPassword']);
+
+    if ($register->validate()) {
+        echo "it's validated";
+
+        $sql = 'INSERT INTO T_users SET t_users_name = "' . $DBsource->escapeString($register->email) . '", t_users_pass = "' . $DBsource->escapeString($register->password) .'"';
+        $DBsource->dbQuery($sql);
+
+        echo 'Database query is excuted';
+    } else {
+        echo 'it\'s not validated';
+    }
+
 }
 
 ?>
@@ -72,14 +86,16 @@ function test_input($data) {
                 </div>
                 <div class="modal-body">
 
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" role="form">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" role="form">
                         <div class="form-group">
                             <label for="email">Email address</label>
-                            <input id="email" type="email" name="email" class="form-control input-lg" placeholder="Enter email" required>
+                            <input id="email" type="email" name="email" class="form-control input-lg" placeholder="Enter email">
+                            <span class="error"><?php echo $emailError;?></span>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input id="password" type="password" name="password" class="form-control input-lg" placeholder="Password" required>
+                            <input id="password" type="password" name="password" class="form-control input-lg" placeholder="Password">
+                            <span class="error"><?php echo $passwordError;?></span>
                         </div>
                         <div class="checkbox">
                             <label>
@@ -90,7 +106,7 @@ function test_input($data) {
                             <input type="submit" class="confirm-btn" value="Sign in">
                         </div>
                     </form>
-
+                    
                 </div>
 
             </div>
@@ -112,13 +128,13 @@ function test_input($data) {
 
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" role="form">
                     <div class="form-group">
-                        <input type="email" name="email"  class="form-control input-lg" placeholder="Enter email" required>
+                        <input type="email" name="email" class="form-control input-lg" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password"  class="form-control input-lg" placeholder="Password" required>
+                        <input type="password" name="password" class="form-control input-lg" placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="repeatPassword"  class="form-control input-lg" placeholder="Confirm Password" required>
+                        <input type="password" name="repeatPassword" class="form-control input-lg" placeholder="Confirm Password">
                     </div>
                     <div class="checkbox">
                         <label>
@@ -138,6 +154,16 @@ function test_input($data) {
 
 
 <!-- modal -->
+
+
+<span class="error">
+<?php
+    if (!empty($email) && !empty($password)){
+        echo "Hello $email your password is $password";
+    }
+?>
+</span>
+
 
 <div class='container text-center'>
     <h1 id="title">KanBan Board</h1>
@@ -168,12 +194,9 @@ function test_input($data) {
 
     </div>
 </div>
-<?php
-    echo "Hello $email your password is $password";
-?>
 
-<script src="../resources/library/jquery/jquery-3.1.1.min.js"></script>
-<script src="../resources/library/bootstrap/bootstrap.js"></script>
+<script src="jquery/jquery-3.1.1.min.js"></script>
+<script src="bootstrap/bootstrap.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/app.js"></script>
 

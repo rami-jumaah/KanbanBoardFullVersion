@@ -23,6 +23,8 @@ span {
 
 .error {
     color: #FF0000;
+    background: aliceblue;
+    font-size: 25px;
 }
 
 .must{
