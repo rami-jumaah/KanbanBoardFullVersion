@@ -1,28 +1,52 @@
+
+var postData = function (data) {
+    return fetch('api.php', {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        },
+        redirect: "follow",
+        referrer: "no-referrer",
+        body: JSON.stringify(data), // body data type must match "Content-Type" header
+    }).then(function () {});
+};
+
 $(function() {
+    if ($('#tasks').length) {
+        userTasks = $('#tasks').data('tasks');
+        for (userTask of userTasks) {
+            $(userTask.state).append('<div class="sticky col-md-4">' + userTask.content + "</div > ");
+        }
+    }
     $("#add").on( "click" , function() {
-        var a = $('#input').val();
-        if (a === "") {
+        var content = $('#input').val();
+        if (content === "") {
             $('.must').text("** Don't be Lazy .. Write and do something.!! **");
             return false;
-
         } else {
-            $('.todo').append('<div class="sticky col-md-4">' + a + "</div>");
+            postData({ content, state: '.todo' }).then(function () {
+                location.reload();
+            });
+
+            $('.todo').append('<div class="sticky col-md-4">' + content + "</div>");
             $('#input').val('');
             $('.must').text('');
-            // $(".sticky").draggable();
-            // $(".sticky").droppable();
-
-
         }
-
     });
 });
 $(".todo").on("click", ".sticky", function() {
-    $('.inprogress').append('<div class="sticky col-md-4">' + $(this).text() + "</div > ");
+    var content = $(this).text();
+    postData({ content, state: '.inprogress' });
+    $('.inprogress').append('<div class="sticky col-md-4">' + content + "</div > ");
     $(this).fadeOut();
 });
 $(".inprogress").on("click", ".sticky", function() {
-    $('.done').append('<div class="sticky col-md-4">' + $(this).text() + "</div > ");
+    var content = $(this).text();
+    postData({ content, state: '.done' });
+    $('.done').append('<div class="sticky col-md-4">' + content + "</div > ");
     $(this).fadeOut();
 });
 $(".done").on("click", ".sticky", function() {

@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fabia_ovv7omp
- * Date: 26.09.2018
- * Time: 09:27
- */
-
-//require_once("../../resources/config.php");
-include("../resources/config.php");
 
 class DBsource
 {
@@ -20,15 +11,15 @@ class DBsource
     private $error;
 	
     
-    public function __construct()
+    public function __construct($config)
     {
-        global $config, $dbsource;
-        
         $dbsource = $config['db']['db1'];
-        $this->connLink = new mysqli($dbsource['host'],$dbsource['dbuser'],$dbsource['dbpwd'],$dbsource['dbname']);
+        $this->connLink = new mysqli($dbsource['host'],$dbsource['dbuser'],$dbsource['dbpwd'],$dbsource['dbname'], 8889);
+        if ($this->connLink->connect_errno) {
+            var_dump($this->connLink->connect_error);
+            exit();
+        }
     }
-
-    
 
     public function get_dbs()
     {
@@ -38,7 +29,11 @@ class DBsource
     public function dbQuery($Query)
     {
         $this->query = $Query;
-        $result = $this->connLink->query($Query);
+        $result =  $this->connLink->query($Query);
+        if ($result === false) {
+            var_dump($this->connLink->error_list);
+            exit;
+        }
         return $result;
     }
     
@@ -88,6 +83,10 @@ class DBsource
 	    {
 	    	
 	    }
+    }
+
+    public function getConnection() {
+        return $this->connLink;
     }
 
 
