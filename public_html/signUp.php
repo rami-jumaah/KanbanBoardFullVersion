@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once ('../src/config.php');
 require_once ('../src/DBsource.php');
 $DBsource = new DBsource($config);
@@ -68,7 +69,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = 'INSERT INTO T_users SET t_users_name = "' . $DBsource->escapeString($register->email) . '", t_users_pass = "' . $DBsource->escapeString($register->password) .'"';
         $DBsource->dbQuery($sql);
 
-        echo 'Database query is excuted';
+        echo ' , Database query is excuted';
+
+        $_SESSION["t_users_name"] = $register->email;
+        $_SESSION["t_users_id"] = $DBsource->getConnection()->insert_id;
+
+
+        header("Location: index.php");
+        die();
+
     } else {
         echo 'it\'s not validated';
     }

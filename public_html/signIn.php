@@ -68,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 FROM T_users 
                 WHERE t_users_name = "' . $DBsource->escapeString($signIn->email) . '" 
                 and t_users_pass = "' . $DBsource->escapeString($signIn->password) .'"';
+
         $loggedIn = false;
         $result = $DBsource->dbQuery($sql);
         if($result->num_rows > 0) {
@@ -75,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (isset($row['t_users_name'])) {
                     $loggedIn = true;
                     $_SESSION["t_users_name"] = $row['t_users_name'];
+                    $_SESSION["t_users_id"] = $row['idT_users'];
                 }
             }
         }
@@ -94,15 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 ?>
-
-
-<span class="error">
-<?php
-if (!empty($email) && !empty($password)){
-    echo "Hello $email your password is $password";
-}
-?>
-</span>
 
 
 <div class='container text-center'>

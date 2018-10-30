@@ -85,5 +85,9 @@ class DBsource
 	    }
     }
 
+    public function getConnection() {
+        return $this->connLink;
+    }
+
 
 }

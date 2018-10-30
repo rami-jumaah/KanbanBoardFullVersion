@@ -54,17 +54,11 @@ DROP TABLE IF EXISTS `kanbanboard`.`T_tasks` ;
 CREATE TABLE IF NOT EXISTS `kanbanboard`.`T_tasks` (
   `idT_tasks` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `t_tasks_content` TEXT(1023) NOT NULL,
-  `fk_tasks_buckets` INT UNSIGNED NOT NULL,
+  `t_buckets_name` VARCHAR(45) NOT NULL,
   `fk_tasks_users` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`idT_tasks`),
   UNIQUE INDEX `idT_tasks_UNIQUE` (`idT_tasks` ASC),
-  INDEX `fk_T_tasks_T_buckets_idx` (`fk_tasks_buckets` ASC),
   INDEX `fk_T_tasks_T_users1_idx` (`fk_tasks_users` ASC),
-  CONSTRAINT `fk_T_tasks_T_buckets`
-    FOREIGN KEY (`fk_tasks_buckets`)
-    REFERENCES `kanbanboard`.`T_buckets` (`idT_buckets`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_T_tasks_T_users1`
     FOREIGN KEY (`fk_tasks_users`)
     REFERENCES `kanbanboard`.`T_users` (`idT_users`)

@@ -25,6 +25,32 @@ $DBsource = new DBsource($config);
         echo '<div class="sign-up container">';
         echo '    <a href="signOut.php" class="signout" ><button id="btnsignIn" class="btn btn-primary">Sign out ' . $_SESSION["t_users_name"] . '</button></a>';
         echo '</div>';
+
+        // fetch the user data
+        $sql = 'SELECT * 
+                FROM T_tasks 
+                WHERE fk_tasks_users = "' . $DBsource->escapeString($_SESSION["t_users_id"]) . '"';
+
+        $loggedIn = false;
+        $result = $DBsource->dbQuery($sql);
+        $index = 0;
+        if($result->num_rows > 0) {
+            echo '<div class="hidden" id="tasks" data-tasks=\'[';
+            while($row=$result->fetch_assoc()) {
+                echo '{';
+                if (isset($row['t_tasks_content']) && isset($row['t_buckets_name'])) {
+                    echo '"content":"' . $row['t_tasks_content'] . '", ';
+                    echo '"state":"' . $row['t_buckets_name'] . '"';
+                }
+                if ($index === ($result->num_rows-1)) {
+                    echo '}';
+                } else {
+                    echo '},';
+                }
+                $index++;
+            }
+            echo ']\'></div>';
+        }
     } else {
         echo '<div class="sign-up container">';
         echo '    <a href="signIn.php" class="signin" ><button id="btnsignIn" class="btn btn-primary">Sign in</button></a>';
