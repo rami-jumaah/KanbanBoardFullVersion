@@ -209,7 +209,7 @@ if (!empty($email) && !empty($password)){
     <input type="text" placeholder=" What are you going to do ??" id='input' required/>
     <button id="add" class="btn btn-primary">Add</button>
 
-    <P class="must">You need to be signed in or up to start the work!</P>
+    <P class="must">*You always need to be signed in to start the work!*</P>
 </div>
 <div class="row text-center">
 
