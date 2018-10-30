@@ -50,6 +50,8 @@ $(".inprogress").on("click", ".sticky", function() {
     $(this).fadeOut();
 });
 $(".done").on("click", ".sticky", function() {
+    var content = $(this).text();
+    postData({ content, state: 'delete' });
     $(this).fadeOut(1000)
 });
 $("#input").on("keyup" , function(event){
