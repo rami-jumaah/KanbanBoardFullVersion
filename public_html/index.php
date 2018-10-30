@@ -1,7 +1,8 @@
 <?php
-    require_once ('../src/config.php');
-    require_once ('../src/DBsource.php');
-    $DBsource = new DBsource($config);
+session_start();
+require_once ('../src/config.php');
+require_once ('../src/DBsource.php');
+$DBsource = new DBsource($config);
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +20,19 @@
 </head>
 
 <body>
-<div class="sign-up container">
-    <a href="#" class="signin" data-toggle="modal" data-target="#signin"><button id="btnsignIn" class="btn btn-primary">Sign in</button></a>
-    <a href="#" class="signup" data-toggle="modal" data-target="#signup"><button id="btnsignUp" class="btn btn-primary">Sign up</button></a>
-</div>
+<?php
+    if (isset($_SESSION["t_users_name"])) {
+        echo '<div class="sign-up container">';
+        echo '    <a href="signOut.php" class="signout" ><button id="btnsignIn" class="btn btn-primary">Sign out ' . $_SESSION["t_users_name"] . '</button></a>';
+        echo '</div>';
+    } else {
+        echo '<div class="sign-up container">';
+        echo '    <a href="signIn.php" class="signin" ><button id="btnsignIn" class="btn btn-primary">Sign in</button></a>';
+        echo '    <a href="signUp.php" class="signup" ><button id="btnsignUp" class="btn btn-primary">Sign up</button></a>';
+        echo '</div>';
+    }
+?>
+
 
 <?php
 
@@ -106,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input type="submit" class="confirm-btn" value="Sign in">
                         </div>
                     </form>
-                    
+
                 </div>
 
             </div>
@@ -158,9 +168,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <span class="error">
 <?php
-    if (!empty($email) && !empty($password)){
-        echo "Hello $email your password is $password";
-    }
+if (!empty($email) && !empty($password)){
+    echo "Hello $email your password is $password";
+}
 ?>
 </span>
 
