@@ -99,12 +99,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $register = new Register($_POST['email'], $_POST['password'], $_POST['repeatPassword']);
 
     if ($register->validate()) {
-        echo "it's validated";
+//        echo "it's validated";
 
         $sql = 'INSERT INTO T_users SET t_users_name = "' . $DBsource->escapeString($register->email) . '", t_users_pass = "' . $DBsource->escapeString($register->password) .'"';
         $DBsource->dbQuery($sql);
 
-        echo 'Database query is excuted';
+//        echo 'Database query is excuted';
     } else {
         echo 'it\'s not validated';
     }

@@ -62,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $signIn = new SignIn($_POST['email'], $_POST['password']);
 
     if ($signIn->validate()) {
-        echo "it's validated";
 
         $sql = 'SELECT * 
                 FROM T_users 
@@ -87,7 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: index.php");
             die();
         }
-        echo 'Data is already there';
 
     } else {
         echo 'it\'s not valid data';

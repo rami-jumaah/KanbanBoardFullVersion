@@ -1,7 +1,7 @@
 body {
-    /*background-color: #f2880b;*/
-    /*background-image: url(../img/img1.jpg);*/
-    /*background-size: cover;*/
+    background-color: #f2880b;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
     /*background-attachment: fixed;*/
 }
 h1 {

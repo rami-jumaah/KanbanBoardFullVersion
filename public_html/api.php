@@ -3,12 +3,6 @@ session_start();
 require_once ('../src/config.php');
 require_once ('../src/DBsource.php');
 $DBsource = new DBsource($config);
-/**
- * Created by IntelliJ IDEA.
- * User: rami
- * Date: 30.10.18
- * Time: 4:50 PM
- */
 
 if (isset($_SESSION["t_users_name"])){
     $data = json_decode(file_get_contents('php://input'), true);
